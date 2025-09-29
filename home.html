@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>TradeVanta — Modern Crypto Trading</title>
+<!-- Fonts & icons -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --bg:#0f1720;
+    --card:#0d1116;
+    --muted:#9aa6b2;
+    --accent:#00c2a8;
+    --accent2:#ff8a4b;
+    --strong:#e6eef3;
+    --glass: rgba(255,255,255,0.03);
+  }
+  html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;color:var(--strong);background:linear-gradient(180deg,var(--bg),#071018);-webkit-font-smoothing:antialiased}
+  .container{max-width:1150px;margin:32px auto;padding:24px}
+  header{display:flex;align-items:center;justify-content:space-between;margin-bottom:28px}
+  .brand{display:flex;align-items:center;gap:12px}
+  .logo{width:44px;height:44px;border-radius:8px;background:linear-gradient(135deg,var(--accent),#00ffd5);display:flex;align-items:center;justify-content:center;font-weight:700;color:#022;box-shadow:0 6px 18px rgba(0,0,0,0.5)}
+  .nav a{color:var(--muted);text-decoration:none;margin-left:18px}
+  .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center}
+  .hero h1{font-size:36px;margin:0 0 12px}
+  .hero p{color:var(--muted);margin:0 0 20px}
+  .cta{display:flex;gap:12px}
+  .btn{padding:12px 18px;border-radius:10px;border:none;cursor:pointer;font-weight:600}
+  .btn-primary{background:var(--accent);color:#021b18}
+  .btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--strong)}
+  .card{background:var(--card);border-radius:12px;padding:18px;box-shadow:0 6px 20px rgba(0,0,0,0.6)}
+  .features{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:24px}
+  .feature{padding:12px;border-radius:8px;background:var(--glass);border:1px solid rgba(255,255,255,0.02)}
+  .footer{color:var(--muted);font-size:13px;margin-top:28px;text-align:center}
+  .price-row{display:flex;gap:12px;flex-wrap:wrap}
+  .ticker{padding:10px 12px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));min-width:120px}
+</style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">TV</div>
+        <div>
+          <div style="font-weight:700">TradeVanta</div>
+          <div style="font-size:12px;color:var(--muted)">Modern crypto trading for pros & learners</div>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="auth.html">Login / Signup</a>
+      </nav>
+    </header>
+
+    <main class="hero">
+      <section>
+        <h1>Trade smarter. Learn faster.</h1>
+        <p>TradeVanta is a lightweight trading frontend connected to Supabase. Live charts, instant currency switching and a minimal, fast experience built for traders and educators.</p>
+        <div class="cta">
+          <a class="btn btn-primary" href="auth.html">Create account — it's free</a>
+          <a class="btn btn-ghost" href="dashboard.html">View demo dashboard</a>
+        </div>
+
+        <div class="features" style="margin-top:22px">
+          <div class="feature">
+            <strong>Live prices</strong>
+            <div style="color:var(--muted);font-size:13px;margin-top:6px">Fetches market data for display and charting</div>
+          </div>
+          <div class="feature">
+            <strong>Currency switcher</strong>
+            <div style="color:var(--muted);font-size:13px;margin-top:6px">Show balances in USD, EUR, NGN or BTC</div>
+          </div>
+          <div class="feature">
+            <strong>Supabase auth</strong>
+            <div style="color:var(--muted);font-size:13px;margin-top:6px">Secure auth + persistent wallet and transactions tables</div>
+          </div>
+        </div>
+      </section>
+
+      <aside>
+        <div class="card">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+            <div>
+              <div style="font-size:12px;color:var(--muted)">Portfolio</div>
+              <div style="font-weight:700;font-size:18px">$12,548.32</div>
+            </div>
+            <div style="text-align:right">
+              <div style="font-size:12px;color:var(--muted)">24h Change</div>
+              <div style="color:var(--accent);font-weight:700">+4.9%</div>
+            </div>
+          </div>
+
+          <div class="price-row">
+            <div class="ticker">
+              <div style="font-size:12px;color:var(--muted)">BTC</div>
+              <div style="font-weight:700">$56,210</div>
+            </div>
+            <div class="ticker">
+              <div style="font-size:12px;color:var(--muted)">ETH</div>
+              <div style="font-weight:700">$3,240</div>
+            </div>
+            <div class="ticker">
+              <div style="font-size:12px;color:var(--muted)">SOL</div>
+              <div style="font-weight:700">$145</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="height:18px"></div>
+
+        <div class="card">
+          <div style="font-size:13px;color:var(--muted);margin-bottom:8px">Get started</div>
+          <a class="btn btn-primary" style="display:block;text-align:center" href="auth.html">Sign up — create wallet</a>
+        </div>
+      </aside>
+    </main>
+
+    <div class="footer">© <span id="year"></span> TradeVanta • Built for speed and clarity</div>
+  </div>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
